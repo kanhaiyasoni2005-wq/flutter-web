@@ -54,11 +54,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyAD0w_6fHO9GEmjdkZpXB0kRolsTRl1OaQ',
-    appId: '1:91838734864:web:6fecab87db81bf3d44a095',
+    appId: '1:91838734864:web:abe1274541bb423744a095',
     messagingSenderId: '91838734864',
     projectId: 'grofix-6b45f',
     authDomain: 'grofix-6b45f.firebaseapp.com',
     storageBucket: 'grofix-6b45f.firebasestorage.app',
-    measurementId: 'G-9T28DCPGS1',
+    measurementId: 'G-150B9B43DQ',
   );
 }

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import 'package:portfolio_web/consonant/theme.dart';
 import 'package:portfolio_web/firebase_options.dart';
-import 'package:portfolio_web/provider/httpprovider.dart';
 import 'package:portfolio_web/provider/provider.dart';
 import 'package:portfolio_web/screens/homepage.dart';
 import 'package:provider/provider.dart';
@@ -11,13 +10,9 @@ import 'package:provider/provider.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  try {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-  } catch (e) {
-    print('Firebase initialization error: $e');
-  }
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   runApp(const MyApp());
 }
@@ -30,7 +25,6 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => Application()),
-        ChangeNotifierProvider(create: (_) => Httpprovider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
