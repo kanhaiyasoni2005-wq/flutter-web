@@ -5,7 +5,7 @@ import 'package:portfolio_web/consonant/textstyle.dart';
 import 'package:portfolio_web/widgets/custom_nav.dart';
 import 'package:portfolio_web/widgets/frontbanner.dart';
 import 'package:portfolio_web/widgets/herowidget.dart';
-import 'package:provider/provider.dart';
+import 'package:portfolio_web/widgets/socialWidget.dart';
 
 class Homepage extends StatefulWidget{
   const Homepage({super.key});
@@ -34,15 +34,15 @@ class _HomepageState extends State<Homepage> {
             child: Column(
 
               children: [
-                Container(
+                
                   
                   
-                  child: Padding(
+                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 20),
                     
                       child: Row(
                         children: [
-                          FrontUi(),
+                          Expanded(child: FrontUi()),
                           SizedBox(width: 40,),
                          Expanded(
                         child: HeroProfileCard(),
@@ -52,7 +52,7 @@ class _HomepageState extends State<Homepage> {
                       
                     ),
                   ),
-                ),
+                
                 SizedBox(height: 20,),
                 
                 Row(
@@ -88,7 +88,49 @@ class _HomepageState extends State<Homepage> {
                     )
 
                   ],
+                ),
+                Divider(),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Column( crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("About Me",style: AppTextStyle.h2,),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: Text("i ama phasaniate in fllutter developer i am learn in \n self study in our mindset \n my goal is achieve a big success until \n achieve success i will not happy..",style: AppTextStyle.title,softWrap: true,),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.all(8.0),
+                              child: ElevatedButton(
+                                
+                                
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColors.primaryDark
+                                
+                              ),
+                                onPressed: (){},
+                              
+                              
+                              
+                               child: Text("Download Resume",style: AppTextStyle.button.copyWith(
+                                color: AppColors.surface
+                               ),)),
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                     Expanded(child: Socialwidget())
+                  ],
                 )
+
                 
               ],
             ),

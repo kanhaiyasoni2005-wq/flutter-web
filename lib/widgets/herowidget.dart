@@ -5,6 +5,11 @@ class HeroProfileCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+       final width = MediaQuery.of(context).size.width;
+
+  if (width < 600) {
+    return const SizedBox.shrink();
+  }
     return LayoutBuilder(
       builder: (context, constraints) {
         // Maximum width limit (web pe bhi control rahe)
@@ -47,7 +52,7 @@ class HeroProfileCard extends StatelessWidget {
                     ),
                     child: ClipOval(
                       child: Image.asset(
-                        "assets/images/persion.png", // apni image path
+                        "assets/images/bg.png", // apni image path
                         fit: BoxFit.cover,
                       ),
                     ),

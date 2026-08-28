@@ -5,11 +5,12 @@ class Apptheme{
   Apptheme._();
 
   static ThemeData lighttheme = ThemeData(
+    scaffoldBackgroundColor: AppColors.background,
     colorScheme: ColorScheme.fromSeed(seedColor: AppColors.primary),
     fontFamily: "Popins",
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        minimumSize:Size(200, 50),
+        // minimumSize:Size(200, 50),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10)
         )
@@ -18,7 +19,7 @@ class Apptheme{
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        minimumSize: Size(200, 50),
+        // minimumSize: Size(200, 50),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10)
         )
